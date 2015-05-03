@@ -1,0 +1,30 @@
+{
+  "name": "pouchdb-sqldown",
+  "version": "0.0.1",
+  "description": "PouchDB adapter for SQLdown over WebSQL, designed for the browser",
+  "main": "index.js",
+  "scripts": {
+    "build": "mkdirp dist && browserify -x pouchdb index.js > dist/pouchdb.sqldown.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nolanlawson/pouchdb-sqldown.git"
+  },
+  "keywords": [
+    "pouchdb",
+    "sqldown"
+  ],
+  "author": "Nolan Lawson <nolan.lawson@gmail.com>",
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/nolanlawson/pouchdb-sqldown/issues"
+  },
+  "homepage": "https://github.com/nolanlawson/pouchdb-sqldown",
+  "dependencies": {
+    "sqldown": "^1.2.0",
+    "pouchdb": "pouchdb/pouchdb#2286-finally-fixed"
+  },
+  "devDependencies": {
+    "mkdirp": "^0.5.0"
+  }
+}
