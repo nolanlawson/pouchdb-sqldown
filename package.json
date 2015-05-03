@@ -1,6 +1,6 @@
 {
   "name": "pouchdb-sqldown",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "PouchDB adapter for SQLdown over WebSQL, designed for the browser",
   "main": "index.js",
   "scripts": {
