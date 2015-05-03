@@ -1,6 +1,8 @@
 pouchdb-sqldown
 ======
 
+[![Build Status](https://travis-ci.org/nolanlawson/pouchdb-sqldown.svg)](https://travis-ci.org/nolanlawson/pouchdb-sqldown)
+
 PouchDB adapter using [SQLdown](https://github.com/calvinmetcalf/SQLdown), which itself uses [knex](https://github.com/tgriesser/knex), which in the browser will use WebSQL.
 
 Basically this is just a demo to show that you can now browserify PouchDB adapter plugins for use in the browser, using any [LevelDOWN adapter](https://github.com/Level/levelup/wiki/Modules#storage-back-ends) suited for the browser.
