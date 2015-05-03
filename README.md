@@ -10,14 +10,39 @@ In practice, there's no reason to use this, because PouchDB itself has its own v
 Usage
 ---
 
-    npm install pouchdb-sqldown
+With Browserify
+----
+
+Install this plugin and PouchDB:
+
+    npm install --save pouchdb
+    npm install --save pouchdb-sqldown
     
-Then:
+
+Then `require()` them:
 
 ```js
 var PouchDB = require('pouchdb');
 require('pouchdb-sqldown');
 
+var db = new PouchDB('mydb', {adapter: 'sqldown'});
+```
+
+Then just browserify your code.
+
+Standalone script
+------
+
+Or if you don't want to use Browserify, and you want to use the scripts directly in the browser, there's a standalone script included in `dist/`. So you just add it in your HTML after PouchDB:
+
+```html
+<script src="pouchdb.js"></script>
+<script src="pouchdb.sqldown.js"></script>
+```
+
+Then you can create a SQLdown-backed database like:
+
+```js
 var db = new PouchDB('mydb', {adapter: 'sqldown'});
 ```
 
