@@ -4,7 +4,10 @@
   "description": "PouchDB adapter for SQLdown over WebSQL, designed for the browser",
   "main": "index.js",
   "scripts": {
-    "build": "mkdirp dist && browserify -x pouchdb index.js > dist/pouchdb.sqldown.js"
+    "build": "mkdirp dist && browserify -x pouchdb index.js > dist/pouchdb.sqldown.js",
+    "test": "./bin/test-browser.js",
+    "dev": "browserify test/test.js > test/test-bundle.js && npm run dev-server",
+    "dev-server": "./bin/dev-server.js"
   },
   "repository": {
     "type": "git",
@@ -21,10 +24,23 @@
   },
   "homepage": "https://github.com/nolanlawson/pouchdb-sqldown",
   "dependencies": {
-    "sqldown": "^1.2.0",
+    "sqldown": "nolanlawson/sqldown#update-knex-fix-browserify",
     "pouchdb": "pouchdb/pouchdb#2286-finally-fixed"
   },
   "devDependencies": {
-    "mkdirp": "^0.5.0"
+    "bluebird": "^2.9.25",
+    "browserify": "^9.0.8",
+    "chai": "^1.9.1",
+    "corsproxy": "^0.2.14",
+    "es5-shim": "^4.1.1",
+    "http-server": "~0.5.5",
+    "mkdirp": "^0.5.0",
+    "mocha": "^1.18.2",
+    "phantomjs": "^1.9.7-5",
+    "pouchdb-http-proxy": "^0.10.4",
+    "sauce-connect-launcher": "^0.4.2",
+    "selenium-standalone": "^3.0.2",
+    "watchify": "^3.1.0",
+    "wd": "^0.2.21"
   }
 }
