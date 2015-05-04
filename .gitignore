@@ -3,3 +3,5 @@ node_modules
 npm-debug.log
 *~
 .idea/
+test-bundle.js
+.test-bundle.js
